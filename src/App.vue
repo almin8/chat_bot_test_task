@@ -77,7 +77,7 @@ const timeoutTextBot = () => {
 
             <div
               v-if="el.id == 'my'"
-              class="w-36 text-right bg-red-400 break-words p-2 rounded-bl-2xl rounded-t-lg max-w-fit"
+              class="w-36 text-center bg-red-400 break-words p-2 rounded-bl-2xl rounded-t-lg max-w-fit"
             >
               {{ el.text }}
             </div>
@@ -91,7 +91,7 @@ const timeoutTextBot = () => {
               class="flex flex-col rounded-t-lg rounded-r-2xl"
             >
               <div
-                class="bg-yellow-400 w-36 break-words p-2 rounded-r-2xl rounded-t-lg"
+                class="bg-yellow-400 w-36 text-center break-words p-2 rounded-r-2xl rounded-t-lg"
               >
                 {{ el.text }}
               </div>
