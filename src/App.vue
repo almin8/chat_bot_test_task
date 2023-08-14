@@ -15,7 +15,9 @@ const getNewMessMe = () => {
   myData.value.push({ id: "my", text: inputValue.value });
   inputValue.value = "";
   typingBot.value = false;
-  setTimeout(() => (typingBot.value = true), 1500);
+  setTimeout(() => {
+    (typingBot.value = true), nextHigth();
+  }, 1500);
   AnswerBot(myData);
 };
 const nextHigth = () => {
@@ -28,16 +30,19 @@ const giveAction = (el) => {
   myData.value.push({ id: "my", text: el });
   /* answers BOT */
   typingBot.value = false;
-  setTimeout(() => (typingBot.value = true), 1500);
+  setTimeout(() => {
+    (typingBot.value = true), nextHigth();
+  }, 1500);
   AnswerBot(myData);
-  nextHigth();
 };
 const timeoutTextBot = () => {
   myData.value.push({
     id: "bot",
     text: "Привет! Что я могу для Вас сделать?",
   }),
-    setTimeout(() => (typingBot.value = true), 1500);
+    setTimeout(() => {
+      (typingBot.value = true), nextHigth();
+    }, 1500);
 };
 </script>
 <template>
