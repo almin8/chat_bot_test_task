@@ -30,6 +30,7 @@ const giveAction = (el) => {
   typingBot.value = false;
   setTimeout(() => (typingBot.value = true), 1500);
   AnswerBot(myData);
+  nextHigth();
 };
 const timeoutTextBot = () => {
   myData.value.push({
@@ -95,7 +96,7 @@ const timeoutTextBot = () => {
                 {{ el.text }}
               </div>
               <div
-                @click="giveAction(elem), nextHigth()"
+                @click="giveAction(elem)"
                 v-if="el.text == 'Привет! Что я могу для Вас сделать?'"
                 v-for="elem in buttons"
                 class="bg-gray-300 mt-2 w-fit p-2 text-sm rounded-lg border-2 cursor-pointer"
